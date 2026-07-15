@@ -1,0 +1,41 @@
+/* ====================== DADOS DE EXEMPLO (MOCK) ======================== */
+
+const MOCK_GRUPOS = {
+  "A": [
+    { nome:"Brasil",   pj:2, v:2, d:0, sg:4,  pts:6, classificada:true  },
+    { nome:"Marrocos", pj:2, v:1, d:1, sg:1,  pts:3, classificada:true  },
+    { nome:"Escócia",  pj:2, v:1, d:1, sg:0,  pts:3, classificada:false },
+    { nome:"Haiti",    pj:2, v:0, d:2, sg:-5, pts:0, classificada:false }
+  ],
+  "B": [
+    { nome:"Argentina", pj:2, v:2, d:0, sg:5, pts:6, classificada:true  },
+    { nome:"Croácia",   pj:2, v:1, d:0, sg:2, pts:4, classificada:true  },
+    { nome:"Nigéria",   pj:2, v:0, d:1, sg:-1,pts:1, classificada:false },
+    { nome:"Japão",     pj:2, v:0, d:2, sg:-6,pts:0, classificada:false }
+  ]
+};
+
+const MOCK_JOGOS = [
+  { selecaoA:"Brasil", selecaoB:"Marrocos", placarA:3, placarB:1, grupo:"A", status:"encerrado" },
+  { selecaoA:"Escócia", selecaoB:"Haiti", placarA:2, placarB:2, grupo:"A", status:"encerrado" },
+  { selecaoA:"Argentina", selecaoB:"Croácia", placarA:null, placarB:null, grupo:"B", status:"aovivo" },
+  { selecaoA:"Nigéria", selecaoB:"Japão", placarA:null, placarB:null, grupo:"B", status:"agendado" }
+];
+
+const MOCK_JOGADORES = [
+  { sigla:"BR", nome:"Menino Ney",       selecao:"Brasil",     clube:"Real Madrid", gols:7 },
+  { sigla:"FR", nome:"Mbappé ditadouro", selecao:"França",     clube:"Real Madrid", gols:5 },
+  { sigla:"AR", nome:"Messi ET",         selecao:"Inglaterra", clube:"Real Madrid", gols:4 },
+  { sigla:"PT", nome:"Ronaldo siu",      selecao:"Portugal",   clube:"Al Nassr",    gols:3 }
+];
+
+const MOCK_SELECOES = [
+  { bandeira:"🇧🇷", nome:"Brasil",   grupo:"A" },
+  { bandeira:"🇲🇦", nome:"Marrocos", grupo:"A" },
+  { bandeira:"🏴", nome:"Escócia",  grupo:"A" },
+  { bandeira:"🇭🇹", nome:"Haiti",    grupo:"A" },
+  { bandeira:"🇦🇷", nome:"Argentina",grupo:"B" },
+  { bandeira:"🇭🇷", nome:"Croácia",  grupo:"B" },
+  { bandeira:"🇳🇬", nome:"Nigéria",  grupo:"B" },
+  { bandeira:"🇯🇵", nome:"Japão",    grupo:"B" }
+];

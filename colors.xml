@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FUNCUP · Copa do Mundo 2026</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="globe">🌎</div>
+      <div class="brand">FUN<span>CUP</span></div>
+    </div>
+
+    <div class="nav-item active" data-page="inicio"><span class="ic">🏠</span> Início</div>
+    <div class="nav-item" data-page="jogos"><span class="ic">📅</span> Jogos</div>
+    <div class="nav-item" data-page="grupos"><span class="ic">🏆</span> Grupos</div>
+    <div class="nav-item" data-page="jogadores"><span class="ic">⚽</span> Jogadores</div>
+    <div class="nav-item" data-page="selecoes"><span class="ic">🛡️</span> Seleções</div>
+    <div class="nav-item" data-page="ia"><span class="ic">💬</span> IA Esportiva</div>
+  </aside>
+
+  <!-- ===================== CONTEÚDO ===================== -->
+  <main class="content">
+
+    <!-- ---------- INÍCIO / DASHBOARD ---------- -->
+    <section id="page-inicio" class="page active">
+      <h1 class="page-title">Copa do Mundo 2026</h1>
+      <p class="page-sub">Acompanhe os resultados em tempo real</p>
+
+      <div class="stats-grid">
+        <div class="stat-card"><div class="num">48</div><div class="label">Jogos realizados</div></div>
+        <div class="stat-card"><div class="num">32</div><div class="label">Seleções</div></div>
+        <div class="stat-card"><div class="num">134</div><div class="label">Gols marcados</div></div>
+        <div class="stat-card"><div class="num">512</div><div class="label">Jogadores</div></div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Grupo A</h3>
+          <table class="tbl">
+            <thead>
+              <tr><th>Seleção</th><th>PJ</th><th>V</th><th>D</th><th>SG</th><th>PTS</th></tr>
+            </thead>
+            <tbody id="tbl-grupo-a"></tbody>
+          </table>
+          <div class="legend"><span class="dot"></span> Classificados para as oitavas</div>
+        </div>
+
+        <div class="card">
+          <h3>Jogadores em destaque</h3>
+          <div id="lista-destaques"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- JOGOS ---------- -->
+    <section id="page-jogos" class="page">
+      <h1 class="page-title">Jogos</h1>
+      <p class="page-sub">Todos os confrontos da Copa do Mundo 2026</p>
+
+      <div class="toolbar">
+        <select id="filtroStatusJogos">
+          <option value="todos">Todos os status</option>
+          <option value="encerrado">Encerrados</option>
+          <option value="aovivo">Ao vivo</option>
+          <option value="agendado">Agendados</option>
+        </select>
+      </div>
+
+      <div class="card">
+        <div id="lista-jogos"></div>
+      </div>
+    </section>
+
+    <!-- ---------- GRUPOS ---------- -->
+    <section id="page-grupos" class="page">
+      <h1 class="page-title">Grupos</h1>
+      <p class="page-sub">Classificação de cada grupo da fase inicial</p>
+
+      <div class="toolbar">
+        <select id="seletorGrupo"></select>
+      </div>
+
+      <div class="card">
+        <table class="tbl">
+          <thead>
+            <tr><th>Seleção</th><th>PJ</th><th>V</th><th>D</th><th>SG</th><th>PTS</th></tr>
+          </thead>
+          <tbody id="tbl-grupo-selecionado"></tbody>
+        </table>
+        <div class="legend"><span class="dot"></span> Classificados para as oitavas</div>
+      </div>
+    </section>
+
+    <!-- ---------- JOGADORES ---------- -->
+    <section id="page-jogadores" class="page">
+      <h1 class="page-title">Jogadores</h1>
+      <p class="page-sub">Busque por jogadores cadastrados na competição</p>
+
+      <div class="toolbar">
+        <input type="text" id="buscaJogador" placeholder="Buscar jogador ou seleção...">
+      </div>
+
+      <div class="card">
+        <div id="lista-jogadores"></div>
+      </div>
+    </section>
+
+    <!-- ---------- SELEÇÕES ---------- -->
+    <section id="page-selecoes" class="page">
+      <h1 class="page-title">Seleções</h1>
+      <p class="page-sub">As 32 seleções participantes</p>
+
+      <div class="card">
+        <div class="grid-cards" id="grid-selecoes"></div>
+      </div>
+    </section>
+
+    <!-- ---------- IA ESPORTIVA ---------- -->
+    <section id="page-ia" class="page">
+      <h1 class="page-title">Conversar com a IA</h1>
+      <p class="page-sub">Pergunte sobre jogos, estatísticas e o mercado de apostas da Copa</p>
+
+      <div class="ia-wrap">
+        <div class="ia-header">
+          <div class="globe">🌎</div>
+          <div class="txt">FUN<span>CUP</span> IA</div>
+        </div>
+        <div class="ia-messages" id="iaMensagens"></div>
+        <div class="ia-inputbar">
+          <input type="text" id="iaInput" placeholder="Digite sua pergunta...">
+          <button id="iaEnviar">➤</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Ordem importa: data (mocks) -> api (camada Java) -> app (telas e navegação) -->
+<script src="js/data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

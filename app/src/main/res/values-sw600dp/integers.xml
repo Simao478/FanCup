@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tablets pequenos / telefones grandes em paisagem: 2 colunas -->
+    <integer name="grid_span_grupos">2</integer>
+    <integer name="grid_span_jogadores">2</integer>
+</resources>

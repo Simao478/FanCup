@@ -46,6 +46,48 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/imgLogo" />
 
+    <!-- Botão Jogos (resultados da Copa do Mundo) -->
+    <ImageButton
+        android:id="@+id/btnJogos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@android:drawable/ic_menu_agenda"
+        android:contentDescription="Jogos"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/imgLogo"
+        app:layout_constraintEnd_toStartOf="@id/btnExcluirHistorico"
+        app:layout_constraintTop_toTopOf="@id/imgLogo" />
+
+    <!-- Botão Grupos e Seleções -->
+    <ImageButton
+        android:id="@+id/btnGrupos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@android:drawable/ic_menu_sort_alphabetically"
+        android:contentDescription="Grupos"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/imgLogo"
+        app:layout_constraintEnd_toStartOf="@id/btnJogos"
+        app:layout_constraintTop_toTopOf="@id/imgLogo" />
+
+    <!-- Botão Jogadores -->
+    <ImageButton
+        android:id="@+id/btnJogadores"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:contentDescription="Jogadores"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/imgLogo"
+        app:layout_constraintEnd_toStartOf="@id/btnGrupos"
+        app:layout_constraintTop_toTopOf="@id/imgLogo" />
+
     <!-- Título -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerMensagens"

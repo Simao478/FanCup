@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tablets grandes: 3 colunas -->
+    <integer name="grid_span_grupos">3</integer>
+    <integer name="grid_span_jogadores">3</integer>
+</resources>
